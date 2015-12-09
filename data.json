@@ -1,0 +1,29 @@
+{
+  "1": {
+    "id": "1",
+    "name": "Nick",
+    "gpa": "4.0",
+    "level": "freshman",
+    "courses": "math",
+    "grade": "A",
+    "instructor": "Smith"
+  },
+  "2": {
+    "id": "2",
+    "name": "Lee",
+    "gpa": "3.5",
+    "level": "sophmore",
+    "courses": "Spanish",
+    "grade": "C",
+    "instructor": "Buna"
+  },
+  "3": {
+    "id": "3",
+    "name": "Bill",
+    "gpa": "3.0",
+    "level": "senoir",
+    "courses": "English",
+    "grade": "B",
+    "instructor": "Mathis"
+  }
+}
