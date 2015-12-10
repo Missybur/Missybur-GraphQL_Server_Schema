@@ -11,15 +11,16 @@ var studentsType = new graphql.GraphQLObjectType({
   fields: {
     id: { type: graphql.GraphQLString },
     name: { type: graphql.GraphQLString },
-    gpa: {type: graphql.GraphQLString},
-    level: {type: graphql.GraphQLString},
-    course: {type: graphql.GraphQLString},
-    grade: {type: graphql.GraphQLString},
-    instructor:  {type: graphql.GraphQLString}
+    gpa: { type: graphql.GraphQLInt },
+    level: { type: graphql.GraphQLString },
+    courses: { type: graphql.GraphQLString },
+    grade: { type: graphql.GraphQLString },
+    instructor: { type: graphql.GraphQLString },
   }
 });
 
-
+// Define our schema, with one top level field, named `user`, that
+// takes an `id` argument and returns the User with that ID.
 var schema = new graphql.GraphQLSchema({
   query: new graphql.GraphQLObjectType({
     name: 'Query',
@@ -27,14 +28,8 @@ var schema = new graphql.GraphQLSchema({
       students: {
         type: studentsType,
         args: {
-          id: { type: graphql.GraphQLString },
-          gpa: {type: graphql.GraphQLString},
-          level: {type: graphql.GraphQLString},
-          course: {type: graphql.GraphQLString},
-          grade: {type: graphql.GraphQLString},
-          instructor:  {type: graphql.GraphQLString}
-
-      },
+          id: { type: graphql.GraphQLString }
+        },
         resolve: function (_, args) {
           return data[args.id];
         }
